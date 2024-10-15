@@ -4,6 +4,20 @@
     <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
   </li>
 </ul>
+<br>
+<h3>Lo nuevo desde Angular 17</h3>
+Suma inyectada: {{total}}
+<ul>
+  @if (products) {
+    @for (product of products; track $index) {
+      <li>
+        <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
+      </li>
+    }
+  } @else{
+    No hay datos.
+  }
+</ul>
 
 
 
